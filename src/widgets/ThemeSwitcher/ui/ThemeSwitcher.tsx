@@ -1,22 +1,22 @@
 import styles from './ThemeSwitcher.module.scss'
-import customClasses from "shared/lib/classNames/customClasses";
-import {Theme, useTheme} from "app/providers/ThemeProvider";
-import {MdDarkMode, MdLightMode} from "react-icons/md";
-import {Button, ThemeButton} from "shared/ui/Button";
+import customClasses from 'shared/lib/classNames/customClasses'
+import { Theme, useTheme } from 'app/providers/ThemeProvider'
+import { MdDarkMode, MdLightMode } from 'react-icons/md'
+import { Button, ThemeButton } from 'shared/ui/Button'
 
 interface ThemeSwitcherProps {
     className?: string
 }
 
-export const ThemeSwitcher = ({className}: ThemeSwitcherProps) => {
-    const {theme, toggleTheme} = useTheme()
+export const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
+    const { theme, toggleTheme } = useTheme()
     return (
         <Button
             theme={ThemeButton.CLEAR}
             className={customClasses(styles.ThemeSwitcher, {}, [className])}
             onClick={toggleTheme}
         >
-            {theme === Theme.DARK ? <MdLightMode style={{color: "goldenrod", background: 'none', fontSize: 50}}/> : <MdDarkMode style={{color: "royalblue", background: 'none', fontSize: 50}}/>}
+            {theme === Theme.DARK ? <MdLightMode style={{ color: 'goldenrod', background: 'none', fontSize: 50 }}/> : <MdDarkMode style={{ color: 'royalblue', background: 'none', fontSize: 50 }}/>}
         </Button>
-    );
-};
+    )
+}

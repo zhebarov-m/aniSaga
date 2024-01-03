@@ -1,13 +1,13 @@
-import React from 'react';
-import {useTranslation} from "react-i18next";
+import React from 'react'
+import { useTranslation } from 'react-i18next'
 
 const FaqPage = () => {
-    const {t} = useTranslation('questions')
+    const { t } = useTranslation('questions')
     return (
         <div>
-            {t("Вопросы")}
+            {t('Вопросы')}
         </div>
-    );
-};
+    )
+}
 
-export default FaqPage;
+export default FaqPage

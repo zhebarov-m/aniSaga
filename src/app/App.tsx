@@ -1,13 +1,12 @@
 import './styles/main.scss'
-import {useTheme} from "app/providers/ThemeProvider";
-import {AppRouter} from "app/providers/router";
-import {Navbar} from "widgets/Navbar";
-import {Sidebar} from "widgets/Sidebar";
-import {Suspense} from "react";
-
+import { useTheme } from 'app/providers/ThemeProvider'
+import { AppRouter } from 'app/providers/router'
+import { Navbar } from 'widgets/Navbar'
+import { Sidebar } from 'widgets/Sidebar'
+import { Suspense } from 'react'
 
 const App = () => {
-    const {theme} = useTheme()
+    const { theme } = useTheme()
 
     return (
         <div className={`app ${theme}`}>
@@ -19,7 +18,7 @@ const App = () => {
                 </div>
             </Suspense>
         </div>
-    );
-};
+    )
+}
 
-export default App;
+export default App

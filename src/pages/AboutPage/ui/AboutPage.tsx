@@ -1,11 +1,11 @@
-import React, {FC} from 'react';
+import React, { type FC } from 'react'
 
 const AboutPage: FC = () => {
     return (
         <div>
             О нас
         </div>
-    );
-};
+    )
+}
 
-export default AboutPage;
+export default AboutPage

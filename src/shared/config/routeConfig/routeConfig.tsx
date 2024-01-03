@@ -1,7 +1,7 @@
-import {RouteProps} from "react-router-dom";
-import MainPage from "pages/MainPage/ui/MainPage";
-import {FaqPage} from "pages/FAQPage";
-import {AboutPage} from "pages/AboutPage";
+import { type RouteProps } from 'react-router-dom'
+import MainPage from 'pages/MainPage/ui/MainPage'
+import { FaqPage } from 'pages/FAQPage'
+import { AboutPage } from 'pages/AboutPage'
 
 export enum AppRoutes {
     MAIN = 'main',
@@ -27,5 +27,5 @@ export const routeConfig: RouteProps[] = [
     {
         path: RoutePath.about,
         element: <AboutPage />
-    },
-];
+    }
+]

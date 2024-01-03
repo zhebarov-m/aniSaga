@@ -1,6 +1,6 @@
 import styles from './Button.module.scss'
-import customClasses from "shared/lib/classNames/customClasses";
-import {ButtonHTMLAttributes, FC} from "react";
+import customClasses from 'shared/lib/classNames/customClasses'
+import { type ButtonHTMLAttributes, type FC } from 'react'
 
 export const enum ThemeButton {
     CLEAR = 'clear',
@@ -9,8 +9,8 @@ export const enum ThemeButton {
 }
 
 interface iButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-    className?: string,
-    theme?: ThemeButton;
+    className?: string
+    theme?: ThemeButton
 }
 
 export const Button: FC<iButtonProps> = (props) => {
@@ -24,10 +24,11 @@ export const Button: FC<iButtonProps> = (props) => {
 
     return (
         <button
-            className={customClasses(styles.Button, {}, [className, styles[theme]])}
+            type="button"
+            className={customClasses(styles.Button, {}, [className!, styles[theme!]])}
             {...otherProps}
         >
             {children}
         </button>
-    );
-};
+    )
+}
