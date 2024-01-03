@@ -1,8 +1,8 @@
 {
-//    "include": [
-//        "./src/**/*",
-//        ".eslintrc.js"
-//    ],
+    "include": [
+        "./src/**/*",
+        ".eslintrc.js"
+    ],
     "compilerOptions": {
         "outDir": "./dist/",
         "noImplicitAny": true,

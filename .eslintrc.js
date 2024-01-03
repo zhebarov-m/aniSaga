@@ -1,7 +1,8 @@
 module.exports = {
     env: {
         browser: true,
-        es2021: true
+        es2021: true,
+        jest: true
     },
     extends: [
         'standard-with-typescript',
@@ -51,7 +52,8 @@ module.exports = {
         '@typescript-eslint/no-non-null-assertion': 'warn',
         '@typescript-eslint/no-floating-promises': 'off',
         'react/no-deprecated': 'off',
-        'i18next/no-literal-string': ['error', { markupOnly: true }]
+        'i18next/no-literal-string': ['error', { markupOnly: true }],
+        'max-len': ['error', { code: 100, ignoreComments: true }]
     },
     globals: {
         __IS_DEV__: true
