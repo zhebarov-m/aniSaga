@@ -1,4 +1,8 @@
 {
+//    "include": [
+//        "./src/**/*",
+//        ".eslintrc.js"
+//    ],
     "compilerOptions": {
         "outDir": "./dist/",
         "noImplicitAny": true,
