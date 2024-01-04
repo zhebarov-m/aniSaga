@@ -16,7 +16,9 @@ export const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
             className={customClasses(styles.ThemeSwitcher, {}, [className!])}
             onClick={toggleTheme}
         >
-            {theme === Theme.DARK ? <MdLightMode style={{ color: 'goldenrod', background: 'none', fontSize: 50 }}/> : <MdDarkMode style={{ color: 'royalblue', background: 'none', fontSize: 50 }}/>}
+            {theme === Theme.DARK
+                ? <MdLightMode style={{ color: 'goldenrod', background: 'none', fontSize: 50 }}/>
+                : <MdDarkMode style={{ color: 'royalblue', background: 'none', fontSize: 50 }}/>}
         </Button>
     )
 }
