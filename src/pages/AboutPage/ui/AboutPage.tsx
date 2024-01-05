@@ -1,11 +1,14 @@
-import React, { type FC } from 'react'
+import React from 'react';
+import { useTranslation } from 'react-i18next';
 
-const AboutPage: FC = () => {
+const AboutPage = () => {
+    const { t } = useTranslation('about');
+
     return (
         <div>
-            О нас
+            {t('О сайтe')}
         </div>
-    )
-}
+    );
+};
 
-export default AboutPage
+export default AboutPage;

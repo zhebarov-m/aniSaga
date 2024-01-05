@@ -2,61 +2,63 @@ module.exports = {
     env: {
         browser: true,
         es2021: true,
-        jest: true
+        jest: true,
     },
     extends: [
-        'standard-with-typescript',
         'plugin:react/recommended',
-        'plugin:i18next/recommended'
+        'airbnb',
+        'plugin:i18next/recommended',
     ],
     parser: '@typescript-eslint/parser',
-    overrides: [
-        {
-            env: {
-                node: true
-            },
-            files: [
-                '.eslintrc.{js,cjs}'
-            ],
-            parserOptions: {
-                sourceType: 'script'
-            }
-        }
-    ],
     parserOptions: {
+        ecmaFeatures: {
+            jsx: true,
+        },
         ecmaVersion: 'latest',
-        sourceType: 'module'
+        sourceType: 'module',
     },
     plugins: [
         'react',
         '@typescript-eslint',
-        'i18next'
+        'i18next',
     ],
     rules: {
         'react/jsx-indent': [2, 4],
-        'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.tsx'] }],
-        '@typescript-eslint/strict-boolean-expressions': 'off',
-        '@typescript-eslint/indent': [2, 4],
+        'react/jsx-indent-props': [2, 4],
+        indent: [2, 4],
+        'react/jsx-filename-extension': [
+            2,
+            { extensions: ['.js', '.jsx', '.tsx'] },
+        ],
+        'import/no-unresolved': 'off',
+        'import/prefer-default-export': 'off',
         'no-unused-vars': 'warn',
-        'react/jsx-props-no-spreading': 'warn',
+        'react/require-default-props': 'off',
         'react/react-in-jsx-scope': 'off',
-        'react/button-has-type': 'warn',
+        'react/jsx-props-no-spreading': 'warn',
         'react/function-component-definition': 'off',
         'no-shadow': 'off',
         'import/extensions': 'off',
         'import/no-extraneous-dependencies': 'off',
         'no-underscore-dangle': 'off',
-        '@typescript-eslint/explicit-function-return-type': 'off',
-        '@typescript-eslint/prefer-nullish-coalescing': 'warn',
-        '@typescript-eslint/naming-convention': 'off',
-        '@typescript-eslint/no-non-null-assertion': 'warn',
-        '@typescript-eslint/no-floating-promises': 'off',
-        'react/no-deprecated': 'off',
-        'i18next/no-literal-string': ['error', { markupOnly: true }],
-        'max-len': ['error', { code: 120, ignoreComments: true }],
-        'n/handle-callback-err': 'warn'
+        'i18next/no-literal-string': [
+            'error',
+            {
+                markupOnly: true,
+                ignoreAttribute: ['data-testid'],
+            },
+        ],
+        'max-len': ['error', { ignoreComments: true, code: 120 }],
     },
     globals: {
-        __IS_DEV__: true
-    }
-}
+        __IS_DEV__: true,
+    },
+    overrides: [
+        {
+            files: ['**/src/**/*.test.{ts,tsx}'],
+            rules: {
+                'i18next/no-literal-string': 'off',
+            },
+        },
+    ],
+};

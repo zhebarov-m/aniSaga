@@ -1,28 +1,30 @@
 {
-    "include": [
-        "./src/**/*",
-        ".eslintrc.js"
-    ],
-    "compilerOptions": {
-        "outDir": "./dist/",
-        "noImplicitAny": true,
-        "module": "ESNext",
-        "target": "es5",
-        "jsx": "react-jsx",
-        "allowJs": true,
-        "baseUrl": ".",
-        "paths": {
-            "*": ["./src/*"]
-        },
-        "moduleResolution": "node",
-        "esModuleInterop": true,
-        "allowSyntheticDefaultImports": true,
-        "strictNullChecks": true
+  "include": [
+    "./src/**/*",
+    ".eslintrc.js",
+    "./config/jest/setupTests.ts"
+  ],
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    "module": "ESNext",
+    "target": "es5",
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "baseUrl": ".",
+    "paths": {
+      "*": ["./src/*"],
+      "shared/*": ["src/shared/*"]
     },
-    "ts-node": {
-        "compilerOptions": {
-            "module": "CommonJS",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strictNullChecks": true
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS",
 
-        }
     }
+  }
 }

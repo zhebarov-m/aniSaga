@@ -1,35 +1,34 @@
-import styles from './AppLink.module.scss'
-import customClasses from 'shared/lib/classNames/customClasses'
-import { Link, type LinkProps } from 'react-router-dom'
-import { type FC, type ReactNode } from 'react'
+import { customClasses } from 'shared/lib/classNames/customClasses';
+import { Link, LinkProps } from 'react-router-dom';
+import { FC } from 'react';
+import cls from './AppLink.module.scss';
 
-export enum eApLinkTheme {
+export enum AppLinkTheme {
     PRIMARY = 'primary',
-    SECONDARY = 'secondary'
+    SECONDARY = 'secondary',
 }
 
-interface iAppLinkProps extends LinkProps {
-    className?: string
-    children: ReactNode
-    theme: eApLinkTheme
+interface AppLinkProps extends LinkProps {
+    className?: string;
+    theme: AppLinkTheme;
 }
 
-export const AppLink: FC<iAppLinkProps> = (props) => {
+export const AppLink: FC<AppLinkProps> = (props) => {
     const {
         to,
         className,
-        theme = eApLinkTheme.PRIMARY,
         children,
+        theme = AppLinkTheme.PRIMARY,
         ...otherProps
-    } = props
+    } = props;
 
     return (
         <Link
             to={to}
-            className={customClasses(styles.AppLink, {}, [className, styles[theme]])}
+            className={customClasses(cls.AppLink, {}, [className!, cls[theme]])}
             {...otherProps}
         >
             {children}
         </Link>
-    )
-}
+    );
+};

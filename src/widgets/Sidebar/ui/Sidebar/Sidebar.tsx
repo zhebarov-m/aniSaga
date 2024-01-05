@@ -1,29 +1,36 @@
-import styles from './Sidebar.module.scss'
-import customClasses from 'shared/lib/classNames/customClasses'
-import { useState } from 'react'
-import { ThemeSwitcher } from 'widgets/ThemeSwitcher'
-import { LangSwitcher } from 'widgets/LangSwitcher'
-import { useTranslation } from 'react-i18next'
+import { customClasses } from 'shared/lib/classNames/customClasses';
+import { useState } from 'react';
+import { LangSwitcher } from 'widgets/LangSwitcher/LangSwitcher';
+import { Button } from 'shared/ui/Button/Button';
+import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
+import styles from './Sidebar.module.scss';
 
 interface SidebarProps {
-    className?: string
+    className?: string;
 }
 
 export const Sidebar = ({ className }: SidebarProps) => {
-    const [collapsed, setCollapsed] = useState(false)
-    const { t } = useTranslation()
+    const [collapsed, setCollapsed] = useState(false);
 
     const onToggle = () => {
-        setCollapsed(prevState => !prevState)
-    }
+        setCollapsed((prev) => !prev);
+    };
 
     return (
-        <div className={customClasses(styles.Sidebar, { [styles.collapsed]: collapsed }, [className!])}>
-            <button onClick={onToggle}>{t('Переключатель')}</button>
+        <div
+            data-testid="sidebar"
+            className={customClasses(styles.Sidebar, { [styles.collapsed]: collapsed }, [className!])}
+        >
+            <Button
+                data-testid="sidebar-toggle"
+                onClick={onToggle}
+            >
+                toggle
+            </Button>
             <div className={styles.switchers}>
                 <ThemeSwitcher />
-                <LangSwitcher className={styles.lang}/>
+                <LangSwitcher className={styles.lang} />
             </div>
         </div>
-    )
-}
+    );
+};
