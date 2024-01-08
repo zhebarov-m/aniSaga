@@ -1,4 +1,5 @@
 import { customClasses } from 'shared/lib/classNames/customClasses';
+import React from 'react';
 import styles from './Loader.module.scss';
 
 interface LoaderProps {

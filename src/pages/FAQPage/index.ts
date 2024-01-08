@@ -1,5 +1,5 @@
-import { FaqPageAsync } from './ui/FaqPage.async'
+import { FaqPageAsync } from './ui/FaqPage.async';
 
 export {
-    FaqPageAsync as FaqPage
-}
+    FaqPageAsync as FaqPage,
+};

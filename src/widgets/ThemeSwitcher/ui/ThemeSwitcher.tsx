@@ -1,7 +1,7 @@
 import { customClasses } from 'shared/lib/classNames/customClasses';
 import React from 'react';
 import { Theme, useTheme } from 'app/providers/ThemeProvider';
-import { MdDarkMode, MdLightMode } from 'react-icons/md'
+import { MdDarkMode, MdLightMode } from 'react-icons/md';
 import { Button, ThemeButton } from 'shared/ui/Button/Button';
 
 interface ThemeSwitcherProps {
@@ -18,8 +18,8 @@ export const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
             onClick={toggleTheme}
         >
             {theme === Theme.DARK
-                ? <MdLightMode style={{ color: 'goldenrod', background: 'none', fontSize: 50 }}/>
-                : <MdDarkMode style={{ color: 'royalblue', background: 'none', fontSize: 50 }}/>}
+                ? <MdLightMode style={{ color: 'goldenrod', background: 'none', fontSize: 50 }} />
+                : <MdDarkMode style={{ color: 'royalblue', background: 'none', fontSize: 50 }} />}
         </Button>
     );
 };

@@ -13,10 +13,10 @@ export default {
         '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
     },
     coveragePathIgnorePatterns: [
-        '\\\\node_modules\\\\'
+        '\\\\node_modules\\\\',
     ],
     moduleDirectories: [
-        'node_modules'
+        'node_modules',
     ],
 
     // An array of file extensions your modules use
@@ -26,7 +26,7 @@ export default {
         'ts',
         'tsx',
         'json',
-        'node'
+        'node',
     ],
     testEnvironment: 'jsdom',
     testMatch: [
@@ -98,7 +98,6 @@ export default {
 
     // An array of directory names to be searched recursively up from the requiring module's location
 
-
     // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
     // moduleNameMapper: {},
 
@@ -134,7 +133,6 @@ export default {
 
     // The root directory that Jest should scan for tests and modules within
 
-
     // A list of paths to directories that Jest should use to search for files in
     // roots: [
     //   "<rootDir>"
@@ -157,7 +155,6 @@ export default {
 
     // The test environment that will be used for testing
 
-
     // Options that will be passed to the testEnvironment
     // testEnvironmentOptions: {},
 
@@ -165,7 +162,6 @@ export default {
     // testLocationInResults: false,
 
     // The glob patterns Jest uses to detect test files
-
 
     // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
     // testPathIgnorePatterns: [
@@ -207,4 +203,4 @@ export default {
 
     // Whether to use watchman for file crawling
     // watchman: true,
-}
+};

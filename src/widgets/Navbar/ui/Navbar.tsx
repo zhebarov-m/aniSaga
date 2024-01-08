@@ -1,5 +1,6 @@
 import { customClasses } from 'shared/lib/classNames/customClasses';
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
+import React from 'react';
 import styles from './Navbar.module.scss';
 
 interface NavbarProps {
