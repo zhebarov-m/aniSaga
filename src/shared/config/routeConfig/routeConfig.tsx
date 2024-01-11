@@ -3,6 +3,7 @@ import { FaqPage } from 'pages/FAQPage';
 import { AboutPage } from 'pages/AboutPage';
 import { NotFoundPage } from 'pages/NotFoundPage';
 import { MainPage } from 'pages/MainPage';
+import React from 'react';
 
 export enum AppRoutes {
     MAIN = 'main',

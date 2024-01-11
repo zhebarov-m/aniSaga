@@ -9,6 +9,7 @@ export default {
     clearMocks: true,
     setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
     moduleNameMapper: {
+        '\\.(jpg|jpeg|png|gif|webp|svg)$': path.resolve(__dirname, '__mocks__/fileMock.ts'),
         '\\.s?css$': 'identity-obj-proxy',
         '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
     },
