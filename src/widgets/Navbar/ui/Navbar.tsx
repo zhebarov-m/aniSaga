@@ -19,6 +19,7 @@ export const Navbar = ({ className }: NavbarProps) => {
 
     return (
         <div className={customClasses(styles.Navbar, {}, [className!])}>
+            <h1>aniSaga</h1>
             <Button
                 theme={ThemeButton.OUTLINE}
                 className={styles.links}
