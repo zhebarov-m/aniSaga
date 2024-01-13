@@ -2,7 +2,8 @@ import React, {
     FC, ReactNode, useCallback, useEffect,
 } from 'react';
 import { customClasses } from 'shared/lib/classNames/customClasses';
-import { Portal } from 'shared/Portal/Portal';
+import { Portal } from 'shared/ui/Portal/Portal';
+import { useTheme } from 'app/providers/ThemeProvider';
 import styles from './Modal.module.scss';
 
 interface ModalProps {
@@ -16,7 +17,7 @@ export const Modal: FC<ModalProps> = (props) => {
     const {
         className, children, isOpen, isClose,
     } = props;
-
+    const { theme } = useTheme();
     const mods: Record<string, boolean> = {
         [styles.opened]: isOpen!,
     };
